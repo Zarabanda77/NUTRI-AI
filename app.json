@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Nutri-AI",
+    "slug": "nutri-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "nutri-ai",
+    "splash": {
+      "backgroundColor": "#0A0E1A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.personal.nutriai",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Nutri-AI usa la cámara para tomar fotos de tus alimentos y calcular sus valores nutricionales.",
+        "NSPhotoLibraryUsageDescription": "Nutri-AI necesita acceso a tus fotos para analizar alimentos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0E1A"
+      },
+      "package": "com.personal.nutriai"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Nutri-AI necesita acceso a tus fotos para analizar alimentos.",
+          "cameraPermission": "Nutri-AI usa la cámara para tomar fotos de tus alimentos."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Nutri-AI usa la cámara para escanear códigos de barras."
+        }
+      ],
+      "expo-sqlite"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "install": {
+      "exclude": ["@types/react"]
+    }
+  }
+}
